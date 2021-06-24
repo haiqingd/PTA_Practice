@@ -1,6 +1,8 @@
+package PAT_Practice_1002;
+
 import java.util.Scanner;
 
-public class PAT_Practice_1002 {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int k1, k2, k = 0, zhishu;
