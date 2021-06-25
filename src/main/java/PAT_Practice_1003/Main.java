@@ -27,10 +27,10 @@ public class Main {
         for (int i = 0; i < N; i++) {
             rescueTeamsAmount[i] = sc.nextInt();
         }
-        return deal();
+        return deal(sc);
     }
 
-    public static String deal() {
+    public static String deal(Scanner sc) {
         // 利用 dijkstra 算法完成单点无响图求最短路径
 
         // SList用于存放已经完成的节点信息
@@ -53,7 +53,6 @@ public class Main {
                 matrix[i][j] = (i == j) ? 0 : INF;
             }
         }
-        Scanner sc = new Scanner(System.in);
         // dist赋值
         for (int i = 0; i < M; i++) {
             int begin = sc.nextInt();
