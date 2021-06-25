@@ -110,23 +110,25 @@ public class Main {
         while (UList.size() != 0) {
             int minDistIndex = SList.size() - 1;
             for (int i = 0; i < matrix[minDistIndex].length; i++) {
-                if(i == minDistIndex || getCityMap(UList, i) == null || getCityMap(SList, minDistIndex) == null){
+                Map<String, Integer> cityMap1 = getCityMap(SList, minDistIndex);
+                Map<String, Integer> cityMap2 = getCityMap(UList, i);
+                if(i == minDistIndex || cityMap2 == null || cityMap1 == null){
                     continue;
                 }
-                if(matrix[minDistIndex][i] != INF && getCityMap(SList, minDistIndex).get("minDist") + matrix[minDistIndex][i] <= getCityMap(UList, i).get("minDist")){
-                    Map<String, Integer> cityMap = getCityMap(UList, i);
+                if(matrix[minDistIndex][i] != INF && cityMap1.get("minDist") + matrix[minDistIndex][i] <= cityMap2.get("minDist")){
+                    Map<String, Integer> cityMap = cityMap2;
                     // 小于的情况，数量设为 上一个节点的数量，救援队数量为新修改的（上一个节点最大的数量加这个节点的数量）
-                    if(getCityMap(SList, minDistIndex).get("minDist") + matrix[minDistIndex][i] < cityMap.get("minDist")){
-                        cityMap.put("numOfMinDist", getCityMap(SList, minDistIndex).get("numOfMinDist"));
-                        cityMap.put("maxRescueTeam", getCityMap(SList, minDistIndex).get("maxRescueTeam") + rescueTeamsAmount[i]);
+                    if(cityMap1.get("minDist") + matrix[minDistIndex][i] < cityMap.get("minDist")){
+                        cityMap.put("numOfMinDist", cityMap1.get("numOfMinDist"));
+                        cityMap.put("maxRescueTeam", cityMap1.get("maxRescueTeam") + rescueTeamsAmount[i]);
                     }
                     // 等于的情况，数量++，救援队需要比较大小
                     else{
-                        cityMap.put("numOfMinDist", cityMap.get("numOfMinDist") + getCityMap(SList, minDistIndex).get("numOfMinDist"));
+                        cityMap.put("numOfMinDist", cityMap.get("numOfMinDist") + cityMap1.get("numOfMinDist"));
                         cityMap.put("maxRescueTeam",
-                                max(getCityMap(SList, minDistIndex).get("maxRescueTeam") + rescueTeamsAmount[i], cityMap.get("maxRescueTeam")) );
+                                max(cityMap1.get("maxRescueTeam") + rescueTeamsAmount[i], cityMap.get("maxRescueTeam")) );
                     }
-                    cityMap.put("minDist",getCityMap(SList, minDistIndex).get("minDist") + matrix[minDistIndex][i]);
+                    cityMap.put("minDist",cityMap1.get("minDist") + matrix[minDistIndex][i]);
                 }
             }
 
