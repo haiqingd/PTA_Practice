@@ -1,23 +1,16 @@
 package PAT_Practice_1003;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.*;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.lang.Integer.max;
 
-
-public class Main {
+public class Slim {
     static Integer INF = MAX_VALUE;
     static int N, M, C1, C2;
     static int[] rescueTeamsAmount;
 
     public static void main(String[] args) {
-        System.out.println(submit());
-    }
-
-    public static String submit() {
         Scanner sc = new Scanner(System.in);
         N = sc.nextInt();
         M = sc.nextInt();
@@ -27,10 +20,6 @@ public class Main {
         for (int i = 0; i < N; i++) {
             rescueTeamsAmount[i] = sc.nextInt();
         }
-        return deal(sc);
-    }
-
-    public static String deal(Scanner sc) {
         // 利用 dijkstra 算法完成单点无响图求最短路径
 
         // SList用于存放已经完成的节点信息
@@ -67,7 +56,9 @@ public class Main {
         numOfShortest = cityMap.get("numOfMinDist");
         totalTeams = cityMap.get("maxRescueTeam");
 
-        return numOfShortest + " " + totalTeams;
+        System.out.println(numOfShortest + " " + totalTeams);
+
+
     }
 
     public static Map<String, Integer> MapInit(int cityNumber, int minDist, int maxRescueTeam, int numOfMinDist) {
@@ -105,7 +96,6 @@ public class Main {
         }
         return null;
     }
-
     static void dijkstra(List<Map<String, Integer>> SList, List<Map<String, Integer>> UList, int[][] matrix) {
         while (UList.size() != 0) {
             int minDistIndex = SList.get(SList.size() - 1 ).get("cityNumber");
@@ -139,46 +129,5 @@ public class Main {
         }
     }
 
-
-    static class PAT1003Test{
-        @Test
-        public void test(){
-            N = 4;M = 5;C1 = 0;C2 = 2;
-            rescueTeamsAmount = new int[]{1, 2, 2, 3};
-            int[] input = new int[]{0,1,1,0,2,2,0,3,1,1,2,1,2,3,1};
-
-            List<Map<String, Integer>> SList = new ArrayList<>();
-            List<Map<String, Integer>> UList = new ArrayList<>();
-            int[][] matrix = new int[N][N];
-            SList.add(MapInit(C1, 0, rescueTeamsAmount[C1], 1));
-            for (int i = 0; i < N; i++) {
-                if (i != C1) {
-                    UList.add(MapInit(i, INF, rescueTeamsAmount[i], 0));
-                }
-                matrix[i] = new int[N];
-                for (int j = 0; j < N; j++) {
-                    matrix[i][j] = (i == j) ? 0 : INF;
-                }
-            }
-            // dist赋值
-            int index = 0;
-            for (int i = 0; i < M; i++) {
-                int begin = input[index];
-                index ++;
-                int end = input[index];
-                index ++;
-                matrix[begin][end] = matrix[end][begin] = input[index];
-                index ++;
-            }
-            dijkstra(SList, UList, matrix);
-
-            int numOfShortest = 0, totalTeams = 0;
-            Map<String, Integer> cityMap = getCityMap(SList, C2);
-            numOfShortest = cityMap.get("numOfMinDist");
-            totalTeams = cityMap.get("maxRescueTeam");
-
-            System.out.println(numOfShortest + " " + totalTeams);
-        }
-    }
 
 }
