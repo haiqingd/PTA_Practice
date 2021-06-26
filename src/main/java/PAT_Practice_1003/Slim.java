@@ -70,6 +70,7 @@ public class Slim {
         return map;
     }
 
+
     /**
      * 找到list中最小距离的index，相同取最前
      */
