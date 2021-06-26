@@ -5,7 +5,7 @@ import java.util.*;
 import static java.lang.Integer.MAX_VALUE;
 import static java.lang.Integer.max;
 
-public class Slim {
+public class Main {
     static Integer INF = MAX_VALUE;
     static int N, M, C1, C2;
     static int[] rescueTeamsAmount;
@@ -38,10 +38,10 @@ public class Slim {
                 UList.add(MapInit(i, INF, rescueTeamsAmount[i], 0));
             }
             matrix[i] = new int[N];
-            for (int j = 0; j < N; j++) {
-                matrix[i][j] = (i == j) ? 0 : INF;
-            }
+            Arrays.fill(matrix[i], INF);
+            matrix[i][i] = 0;
         }
+
         // dist赋值
         for (int i = 0; i < M; i++) {
             int begin = sc.nextInt();
@@ -49,7 +49,34 @@ public class Slim {
             matrix[begin][end] = matrix[end][begin] = sc.nextInt();
         }
         // 单源最短路径
-        dijkstra(SList, UList, matrix);
+        while (UList.size() != 0) {
+            Map<String, Integer> cityMap1 = SList.get(SList.size() - 1 );
+            int minDistIndex = cityMap1.get("cityNumber");
+
+            for (Map<String, Integer> cityMap2 : UList) {
+                int i = cityMap2.get("cityNumber");
+
+                if(matrix[minDistIndex][i] != INF && cityMap1.get("minDist") + matrix[minDistIndex][i] <= cityMap2.get("minDist")){
+                    // 小于的情况，数量设为 上一个节点的数量，救援队数量为新修改的（上一个节点最大的数量加这个节点的数量）
+                    if(cityMap1.get("minDist") + matrix[minDistIndex][i] < cityMap2.get("minDist")){
+                        cityMap2.put("numOfMinDist", cityMap1.get("numOfMinDist"));
+                        cityMap2.put("maxRescueTeam", cityMap1.get("maxRescueTeam") + rescueTeamsAmount[i]);
+                    }
+                    // 等于的情况，数量++，救援队需要比较大小
+                    else{
+                        cityMap2.put("numOfMinDist", cityMap2.get("numOfMinDist") + cityMap1.get("numOfMinDist"));
+                        cityMap2.put("maxRescueTeam",
+                                max(cityMap1.get("maxRescueTeam") + rescueTeamsAmount[i], cityMap2.get("maxRescueTeam")) );
+                    }
+                    cityMap2.put("minDist",cityMap1.get("minDist") + matrix[minDistIndex][i]);
+                }
+            }
+
+            int minDistIndexU = getMinDistIndex(UList);
+            Map<String, Integer> minDistMap = UList.get(minDistIndexU);
+            SList.add(minDistMap);
+            UList.remove(minDistIndexU);
+        }
 
         int numOfShortest = 0, totalTeams = 0;
         Map<String, Integer> cityMap = getCityMap(SList, C2);
@@ -96,38 +123,6 @@ public class Slim {
             }
         }
         return null;
-    }
-    static void dijkstra(List<Map<String, Integer>> SList, List<Map<String, Integer>> UList, int[][] matrix) {
-        while (UList.size() != 0) {
-            int minDistIndex = SList.get(SList.size() - 1 ).get("cityNumber");
-            for (int i = 0; i < matrix[minDistIndex].length; i++) {
-                Map<String, Integer> cityMap1 = getCityMap(SList, minDistIndex);
-                Map<String, Integer> cityMap2 = getCityMap(UList, i);
-                if(i == minDistIndex || cityMap2 == null || cityMap1 == null){
-                    continue;
-                }
-                if(matrix[minDistIndex][i] != INF && cityMap1.get("minDist") + matrix[minDistIndex][i] <= cityMap2.get("minDist")){
-                    Map<String, Integer> cityMap = cityMap2;
-                    // 小于的情况，数量设为 上一个节点的数量，救援队数量为新修改的（上一个节点最大的数量加这个节点的数量）
-                    if(cityMap1.get("minDist") + matrix[minDistIndex][i] < cityMap.get("minDist")){
-                        cityMap.put("numOfMinDist", cityMap1.get("numOfMinDist"));
-                        cityMap.put("maxRescueTeam", cityMap1.get("maxRescueTeam") + rescueTeamsAmount[i]);
-                    }
-                    // 等于的情况，数量++，救援队需要比较大小
-                    else{
-                        cityMap.put("numOfMinDist", cityMap.get("numOfMinDist") + cityMap1.get("numOfMinDist"));
-                        cityMap.put("maxRescueTeam",
-                                max(cityMap1.get("maxRescueTeam") + rescueTeamsAmount[i], cityMap.get("maxRescueTeam")) );
-                    }
-                    cityMap.put("minDist",cityMap1.get("minDist") + matrix[minDistIndex][i]);
-                }
-            }
-
-            int minDistIndexU = getMinDistIndex(UList);
-            Map<String, Integer> minDistMap = UList.get(minDistIndexU);
-            SList.add(minDistMap);
-            UList.remove(minDistIndexU);
-        }
     }
 
 
