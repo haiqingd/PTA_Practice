@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     static int sum, toAddSum, sumNext, toAddSumNext;
-    static boolean isNext, isAllNegative;
+    static boolean isNext, isAllNegative = true;
     static int begin, end, beginNext, endNext;
 
 
@@ -15,26 +15,24 @@ public class Main {
     // 情形3：添加后 toAddSum + sum 的和 小于 0，启用sumNext和toAddSumNext，从下一个值记录进toAddSumNext中，重复和之前一样的过程
     // 情形4：当sumNext中的值大于sum时，将sumNext赋值给sum，sumNext重置
     public static void main(String[] args) {
-        int firstNum = 0, lastNum = 0;
-
         Scanner sc = new Scanner(System.in);
-        int K = sc.nextInt();
+        int K = Integer.parseInt(sc.nextLine());
+        String[] inputs = sc.nextLine().split(" ");
+
         for (int i = 0; i < K; i++) {
-            int data = sc.nextInt();
+            int data = Integer.parseInt(inputs[i]);
+            if(isAllNegative && data >= 0){
+                isAllNegative = false;
+            }
             if(!isNext){
                 toAddSum += data;
-                if(data >= 0) isAllNegative = false;
-                if(i == 0 || i ==K-1){
-                    if(i==0) firstNum = data;
-                    if(i==K-1) lastNum = data;
-                }
                 if(toAddSum > 0){
-                    if(sum == 0) begin = i;
-                    end = i;
+                    if(sum == 0) begin = data;
+                    end = data;
                     sum += toAddSum;
                     toAddSum = 0;
                 }
-                if( sum + toAddSum < 0) {
+                else if( sum + toAddSum < 0) {
                     toAddSum = 0;
                     isNext = true;
                 }
@@ -42,24 +40,28 @@ public class Main {
             else {
                 toAddSumNext += data;
                 if(toAddSumNext > 0){
-                    if(sumNext == 0) beginNext = i;
-                    endNext = i;
+                    if(sumNext == 0) beginNext = data;
+                    endNext = data;
                     sumNext += toAddSumNext;
                     toAddSumNext = 0;
+                    if( sumNext > sum) {
+                        isNext = false;
+                        begin = beginNext;
+                        end = endNext;
+                        sum = sumNext;
+                        sumNext = 0;
+                    }
                 }
-                if( sumNext > sum) {
+                else if( sumNext + toAddSumNext < 0){
                     toAddSumNext = 0;
-                    isNext = false;
-                    begin = beginNext;
-                    end = endNext;
-                    sum = sumNext;
-                    sumNext = 0;
                 }
             }
         }
 
-        if(isAllNegative) System.out.println(0 + " " + firstNum + " " + lastNum);
-
+        if(isAllNegative) {
+            System.out.println(0 + " " + Integer.parseInt(inputs[0]) + " " + Integer.parseInt(inputs[K-1]));
+            return;
+        }
         System.out.println(sum + " " + begin + " " + end);
 
     }

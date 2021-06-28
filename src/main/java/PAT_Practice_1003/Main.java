@@ -140,9 +140,9 @@ public class Main {
     static class PAT1003Test{
         @Test
         public void test(){
-            N = 4;M = 5;C1 = 0;C2 = 2;
-            rescueTeamsAmount = new int[]{1, 2, 2, 3};
-            int[] input = new int[]{0,1,1,0,2,2,0,3,1,1,2,1,2,3,1};
+            N = 7;M = 11;C1 = 0;C2 = 2;
+            rescueTeamsAmount = new int[]{1, 1, 1, 1, 1, 1, 1};
+            int[] input = new int[]{0,1,2, 0,2,4, 0,3,1, 0,4,2, 1,2,2, 2,3,4, 2,5,1, 2,6,1, 3,4,1, 4,5,1, 4,6,1};
 
             List<Map<String, Integer>> SList = new ArrayList<>();
             List<Map<String, Integer>> UList = new ArrayList<>();
