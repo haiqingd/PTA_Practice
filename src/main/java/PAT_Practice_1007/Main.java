@@ -1,6 +1,8 @@
 package PAT_Practice_1007;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
     static int sum, toAddSum, sumNext, toAddSumNext;
@@ -14,10 +16,10 @@ public class Main {
     // 情形2：添加后 toAddSum 的值 小于等于（等于的地方需要根据题意确认）0，继续向后读取，并添加进 toAddSum
     // 情形3：添加后 toAddSum + sum 的和 小于 0，启用sumNext和toAddSumNext，从下一个值记录进toAddSumNext中，重复和之前一样的过程
     // 情形4：当sumNext中的值大于sum时，将sumNext赋值给sum，sumNext重置
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int K = Integer.parseInt(sc.nextLine());
-        String[] inputs = sc.nextLine().split(" ");
+    public static void main(String[] args) throws IOException {
+        BufferedReader sc=new BufferedReader(new InputStreamReader(System.in));
+        int K = Integer.parseInt(sc.readLine());
+        String[] inputs = sc.readLine().split(" ");
 
         for (int i = 0; i < K; i++) {
             int data = Integer.parseInt(inputs[i]);
