@@ -1,12 +1,9 @@
-[
-  {
-    "id": 0,
-    "input": "",
-    "answer": ""
-  },
-  {
-    "id": 1,
-    "input": "",
-    "answer": ""
-  }
-]
+{
+    "testcase": [
+        {
+            "id": 0,
+            "input": "0",
+            "answer": "Yes\n0"
+        }
+    ]
+}
