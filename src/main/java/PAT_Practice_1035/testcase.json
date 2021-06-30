@@ -1,0 +1,9 @@
+{
+    "testcase": [
+        {
+            "id": 0,
+            "input": "3\nTeam000002 Rlsp0dfa\nTeam000003 perfectpwd\nTeam000001 R1spOdfa",
+            "answer": "2\nTeam000002 RLsp%dfa\nTeam000001 R@spodfa"
+        }
+    ]
+}
