@@ -26,7 +26,6 @@ public class Main {
         for (i = 0; i < K; i++) {
             if(!isPalindromic(number)) {
                 number = palindromicAdd(number);
-                System.out.println(String.valueOf(number));
             }else {
                 break;
             }
