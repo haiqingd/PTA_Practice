@@ -1,0 +1,21 @@
+{
+    "testcase": [
+        {
+            "id": 0,
+            "input": "3485djDkxh4hhGE \n2984akDfkkkkggEdsb \ns&hgsfdk \nd&Hyscvnm",
+            "answer": "THU 14:04"
+        },{
+            "id": 1,
+            "input": "3485djDkxh4hhGE\n2984akDfkkkkggEdsb\ns&hgsfdk\nd&Hyscvnm",
+            "answer": "THU 14:04"
+        },{
+            "id": 2,
+            "input": "3485djDkxh4hhGE 2984akDfkkkkggEdsb s&hgsfdk d&Hyscvnm",
+            "answer": "THU 14:04"
+        },{
+            "id": 3,
+            "input": "3485djDkxh4hhGE  2984akDfkkkkggEdsb  s&hgsfdk  d&Hyscvnm",
+            "answer": "THU 14:04"
+        }
+    ]
+}
