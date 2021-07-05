@@ -22,24 +22,31 @@ public class Main {
 
     static String submit(String line) {
         String[] split = line.split("\\s+");
-        boolean firstFlag = true;
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < split[0].length() && i < split[1].length(); i++) {
+        int i;
+        for (i = 0; i < split[0].length() && i < split[1].length(); i++) {
             if (split[0].charAt(i) == split[1].charAt(i)) {
                 char same = split[0].charAt(i);
-                if (firstFlag && same >= 'A' && same <= 'G') {
+                if (same >= 'A' && same <= 'G') {
                     sb.append(weekday[same - 'A']).append(" ");
-                    firstFlag = false;
-                } else if (!firstFlag && ((same >= '0' && same <= '9') || (same >= 'A' && same <= 'N'))) {
-                    if (same <= '9') sb.append(same - '0').append(":");
+                    break;
+                }
+            }
+        }
+        for (i++; i < split[0].length() && i < split[1].length(); i++) {
+            if (split[0].charAt(i) == split[1].charAt(i)) {
+                char same = split[0].charAt(i);
+                if ( ((same >= '0' && same <= '9') || (same >= 'A' && same <= 'N'))) {
+                    if (same <= '9') sb.append(String.format("%02d",same - '0')   ).append(":");
                     else sb.append(String.format("%02d", (same - 'A' + 10))).append(":");
                     break;
                 }
             }
         }
 
-        for (int i = 0; i < split[2].length() && i < split[3].length(); i++) {
+
+        for (i = 0; i < split[2].length() && i < split[3].length(); i++) {
             if (split[2].charAt(i) == split[3].charAt(i)) {
                 char same = split[2].charAt(i);
                 if (Character.isLowerCase(same) || Character.isUpperCase(same)) {
