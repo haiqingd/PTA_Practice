@@ -10,7 +10,7 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         String line = in.readLine();
-        while (!line.equals(" null")){
+        while (!line.equals("\nnull")){
             sb.append(line);
             line = "\n" + in.readLine();
         }
