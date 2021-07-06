@@ -1,0 +1,504 @@
+{
+    "testcase": [
+        {
+            "id": 2,
+            "input": "413247952",
+            "answer": "si Yi yi Qian san Bai er Shi si Wan qi Qian jiu Bai wu Shi er"
+        },
+        {
+            "id": 3,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 4,
+            "input": "-530663485",
+            "answer": "Fu wu Yi san Qian ling liu Shi liu Wan san Qian si Bai ba Shi wu"
+        },
+        {
+            "id": 5,
+            "input": "-453250310",
+            "answer": "Fu si Yi wu Qian san Bai er Shi wu Wan ling san Bai yi Shi"
+        },
+        {
+            "id": 6,
+            "input": "-590134022",
+            "answer": "Fu wu Yi jiu Qian ling yi Shi san Wan si Qian ling er Shi er"
+        },
+        {
+            "id": 7,
+            "input": "-851921771",
+            "answer": "Fu ba Yi wu Qian yi Bai jiu Shi er Wan yi Qian qi Bai qi Shi yi"
+        },
+        {
+            "id": 8,
+            "input": "289768524",
+            "answer": "er Yi ba Qian jiu Bai qi Shi liu Wan ba Qian wu Bai er Shi si"
+        },
+        {
+            "id": 9,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 10,
+            "input": "-308131533",
+            "answer": "Fu san Yi ling ba Bai yi Shi san Wan yi Qian wu Bai san Shi san"
+        },
+        {
+            "id": 11,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 12,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 13,
+            "input": "-630194392",
+            "answer": "Fu liu Yi san Qian ling yi Shi jiu Wan si Qian san Bai jiu Shi er"
+        },
+        {
+            "id": 14,
+            "input": "241522821",
+            "answer": "er Yi si Qian yi Bai wu Shi er Wan er Qian ba Bai er Shi yi"
+        },
+        {
+            "id": 15,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 16,
+            "input": "47398980",
+            "answer": "si Qian qi Bai san Shi jiu Wan ba Qian jiu Bai ba Shi"
+        },
+        {
+            "id": 17,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 18,
+            "input": "-957317475",
+            "answer": "Fu jiu Yi wu Qian qi Bai san Shi yi Wan qi Qian si Bai qi Shi wu"
+        },
+        {
+            "id": 19,
+            "input": "995965621",
+            "answer": "jiu Yi jiu Qian wu Bai jiu Shi liu Wan wu Qian liu Bai er Shi yi"
+        },
+        {
+            "id": 20,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 21,
+            "input": "-346977534",
+            "answer": "Fu san Yi si Qian liu Bai jiu Shi qi Wan qi Qian wu Bai san Shi si"
+        },
+        {
+            "id": 22,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 23,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 24,
+            "input": "-643689097",
+            "answer": "Fu liu Yi si Qian san Bai liu Shi ba Wan jiu Qian ling jiu Shi qi"
+        },
+        {
+            "id": 25,
+            "input": "526861876",
+            "answer": "wu Yi er Qian liu Bai ba Shi liu Wan yi Qian ba Bai qi Shi liu"
+        },
+        {
+            "id": 26,
+            "input": "-326672239",
+            "answer": "Fu san Yi er Qian liu Bai liu Shi qi Wan er Qian er Bai san Shi jiu"
+        },
+        {
+            "id": 27,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 28,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 29,
+            "input": "398784837",
+            "answer": "san Yi jiu Qian ba Bai qi Shi ba Wan si Qian ba Bai san Shi qi"
+        },
+        {
+            "id": 30,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 31,
+            "input": "-707671648",
+            "answer": "Fu qi Yi ling qi Bai liu Shi qi Wan yi Qian liu Bai si Shi ba"
+        },
+        {
+            "id": 32,
+            "input": "-353591714",
+            "answer": "Fu san Yi wu Qian san Bai wu Shi jiu Wan yi Qian qi Bai yi Shi si"
+        },
+        {
+            "id": 33,
+            "input": "151624911",
+            "answer": "yi Yi wu Qian yi Bai liu Shi er Wan si Qian jiu Bai yi Shi yi"
+        },
+        {
+            "id": 34,
+            "input": "-19943701",
+            "answer": "Fu yi Qian jiu Bai jiu Shi si Wan san Qian qi Bai ling yi"
+        },
+        {
+            "id": 35,
+            "input": "991839489",
+            "answer": "jiu Yi jiu Qian yi Bai ba Shi san Wan jiu Qian si Bai ba Shi jiu"
+        },
+        {
+            "id": 36,
+            "input": "-612397989",
+            "answer": "Fu liu Yi yi Qian er Bai san Shi jiu Wan qi Qian jiu Bai ba Shi jiu"
+        },
+        {
+            "id": 37,
+            "input": "-963300005",
+            "answer": "Fu jiu Yi liu Qian san Bai san Shi Wan ling wu"
+        },
+        {
+            "id": 38,
+            "input": "294412375",
+            "answer": "er Yi jiu Qian si Bai si Shi yi Wan er Qian san Bai qi Shi wu"
+        },
+        {
+            "id": 39,
+            "input": "-805021421",
+            "answer": "Fu ba Yi ling wu Bai ling er Wan yi Qian si Bai er Shi yi"
+        },
+        {
+            "id": 40,
+            "input": "637393302",
+            "answer": "liu Yi san Qian qi Bai san Shi jiu Wan san Qian san Bai ling er"
+        },
+        {
+            "id": 41,
+            "input": "-284997529",
+            "answer": "Fu er Yi ba Qian si Bai jiu Shi jiu Wan qi Qian wu Bai er Shi jiu"
+        },
+        {
+            "id": 42,
+            "input": "753350762",
+            "answer": "qi Yi wu Qian san Bai san Shi wu Wan ling qi Bai liu Shi er"
+        },
+        {
+            "id": 43,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 44,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 45,
+            "input": "256798162",
+            "answer": "er Yi wu Qian liu Bai qi Shi jiu Wan ba Qian yi Bai liu Shi er"
+        },
+        {
+            "id": 46,
+            "input": "787142860",
+            "answer": "qi Yi ba Qian qi Bai yi Shi si Wan er Qian ba Bai liu Shi"
+        },
+        {
+            "id": 47,
+            "input": "934512998",
+            "answer": "jiu Yi san Qian si Bai wu Shi yi Wan er Qian jiu Bai jiu Shi ba"
+        },
+        {
+            "id": 48,
+            "input": "-184870795",
+            "answer": "Fu yi Yi ba Qian si Bai ba Shi qi Wan ling qi Bai jiu Shi wu"
+        },
+        {
+            "id": 49,
+            "input": "-919858138",
+            "answer": "Fu jiu Yi yi Qian jiu Bai ba Shi wu Wan ba Qian yi Bai san Shi ba"
+        },
+        {
+            "id": 50,
+            "input": "-60537883",
+            "answer": "Fu liu Qian ling wu Shi san Wan qi Qian ba Bai ba Shi san"
+        },
+        {
+            "id": 51,
+            "input": "-583644757",
+            "answer": "Fu wu Yi ba Qian san Bai liu Shi si Wan si Qian qi Bai wu Shi qi"
+        },
+        {
+            "id": 52,
+            "input": "940073061",
+            "answer": "jiu Yi si Qian ling qi Wan san Qian ling liu Shi yi"
+        },
+        {
+            "id": 53,
+            "input": "-324441088",
+            "answer": "Fu san Yi er Qian si Bai si Shi si Wan yi Qian ling ba Shi ba"
+        },
+        {
+            "id": 54,
+            "input": "172511881",
+            "answer": "yi Yi qi Qian er Bai wu Shi yi Wan yi Qian ba Bai ba Shi yi"
+        },
+        {
+            "id": 55,
+            "input": "298095500",
+            "answer": "er Yi jiu Qian ba Bai ling jiu Wan wu Qian wu Bai"
+        },
+        {
+            "id": 56,
+            "input": "-186659984",
+            "answer": "Fu yi Yi ba Qian liu Bai liu Shi wu Wan jiu Qian jiu Bai ba Shi si"
+        },
+        {
+            "id": 57,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 58,
+            "input": "532581798",
+            "answer": "wu Yi san Qian er Bai wu Shi ba Wan yi Qian qi Bai jiu Shi ba"
+        },
+        {
+            "id": 59,
+            "input": "-152629698",
+            "answer": "Fu yi Yi wu Qian er Bai liu Shi er Wan jiu Qian liu Bai jiu Shi ba"
+        },
+        {
+            "id": 60,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 61,
+            "input": "-884924278",
+            "answer": "Fu ba Yi ba Qian si Bai jiu Shi er Wan si Qian er Bai qi Shi ba"
+        },
+        {
+            "id": 62,
+            "input": "949077062",
+            "answer": "jiu Yi si Qian jiu Bai ling qi Wan qi Qian ling liu Shi er"
+        },
+        {
+            "id": 63,
+            "input": "189897744",
+            "answer": "yi Yi ba Qian jiu Bai ba Shi jiu Wan qi Qian qi Bai si Shi si"
+        },
+        {
+            "id": 64,
+            "input": "-677986229",
+            "answer": "Fu liu Yi qi Qian qi Bai jiu Shi ba Wan liu Qian er Bai er Shi jiu"
+        },
+        {
+            "id": 65,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 66,
+            "input": "740493184",
+            "answer": "qi Yi si Qian ling si Shi jiu Wan san Qian yi Bai ba Shi si"
+        },
+        {
+            "id": 67,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 68,
+            "input": "-994043309",
+            "answer": "Fu jiu Yi jiu Qian si Bai ling si Wan san Qian san Bai ling jiu"
+        },
+        {
+            "id": 69,
+            "input": "575313159",
+            "answer": "wu Yi qi Qian wu Bai san Shi yi Wan san Qian yi Bai wu Shi jiu"
+        },
+        {
+            "id": 70,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 71,
+            "input": "355331553",
+            "answer": "san Yi wu Qian wu Bai san Shi san Wan yi Qian wu Bai wu Shi san"
+        },
+        {
+            "id": 72,
+            "input": "173213264",
+            "answer": "yi Yi qi Qian san Bai er Shi yi Wan san Qian er Bai liu Shi si"
+        },
+        {
+            "id": 73,
+            "input": "-299541076",
+            "answer": "Fu er Yi jiu Qian jiu Bai wu Shi si Wan yi Qian ling qi Shi liu"
+        },
+        {
+            "id": 74,
+            "input": "810368207",
+            "answer": "ba Yi yi Qian ling san Shi liu Wan ba Qian er Bai ling qi"
+        },
+        {
+            "id": 75,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 76,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 77,
+            "input": "-737250417",
+            "answer": "Fu qi Yi san Qian qi Bai er Shi wu Wan ling si Bai yi Shi qi"
+        },
+        {
+            "id": 78,
+            "input": "-899589379",
+            "answer": "Fu ba Yi jiu Qian jiu Bai wu Shi ba Wan jiu Qian san Bai qi Shi jiu"
+        },
+        {
+            "id": 79,
+            "input": "-82145106",
+            "answer": "Fu ba Qian er Bai yi Shi si Wan wu Qian yi Bai ling liu"
+        },
+        {
+            "id": 80,
+            "input": "-651981961",
+            "answer": "Fu liu Yi wu Qian yi Bai jiu Shi ba Wan yi Qian jiu Bai liu Shi yi"
+        },
+        {
+            "id": 81,
+            "input": "219393124",
+            "answer": "er Yi yi Qian jiu Bai san Shi jiu Wan san Qian yi Bai er Shi si"
+        },
+        {
+            "id": 82,
+            "input": "432539575",
+            "answer": "si Yi san Qian er Bai wu Shi san Wan jiu Qian wu Bai qi Shi wu"
+        },
+        {
+            "id": 83,
+            "input": "388086457",
+            "answer": "san Yi ba Qian ba Bai ling ba Wan liu Qian si Bai wu Shi qi"
+        },
+        {
+            "id": 84,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 85,
+            "input": "-854962356",
+            "answer": "Fu ba Yi wu Qian si Bai jiu Shi liu Wan er Qian san Bai wu Shi liu"
+        },
+        {
+            "id": 86,
+            "input": "-333480535",
+            "answer": "Fu san Yi san Qian san Bai si Shi ba Wan ling wu Bai san Shi wu"
+        },
+        {
+            "id": 87,
+            "input": "-96428872",
+            "answer": "Fu jiu Qian liu Bai si Shi er Wan ba Qian ba Bai qi Shi er"
+        },
+        {
+            "id": 88,
+            "input": "110297902",
+            "answer": "yi Yi yi Qian ling er Shi jiu Wan qi Qian jiu Bai ling er"
+        },
+        {
+            "id": 89,
+            "input": "-637116747",
+            "answer": "Fu liu Yi san Qian qi Bai yi Shi yi Wan liu Qian qi Bai si Shi qi"
+        },
+        {
+            "id": 90,
+            "input": "-996417952",
+            "answer": "Fu jiu Yi jiu Qian liu Bai si Shi yi Wan qi Qian jiu Bai wu Shi er"
+        },
+        {
+            "id": 91,
+            "input": "-58956019",
+            "answer": "Fu wu Qian ba Bai jiu Shi wu Wan liu Qian ling yi Shi jiu"
+        },
+        {
+            "id": 92,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 93,
+            "input": "773439480",
+            "answer": "qi Yi qi Qian san Bai si Shi san Wan jiu Qian si Bai ba Shi"
+        },
+        {
+            "id": 94,
+            "input": "845597740",
+            "answer": "ba Yi si Qian wu Bai wu Shi jiu Wan qi Qian qi Bai si Shi"
+        },
+        {
+            "id": 95,
+            "input": "-9941439",
+            "answer": "Fu jiu Bai jiu Shi si Wan yi Qian si Bai san Shi jiu"
+        },
+        {
+            "id": 96,
+            "input": "-705246239",
+            "answer": "Fu qi Yi ling wu Bai er Shi si Wan liu Qian er Bai san Shi jiu"
+        },
+        {
+            "id": 97,
+            "input": "892485563",
+            "answer": "ba Yi jiu Qian er Bai si Shi ba Wan wu Qian wu Bai liu Shi san"
+        },
+        {
+            "id": 98,
+            "input": "-373623014",
+            "answer": "Fu san Yi qi Qian san Bai liu Shi er Wan san Qian ling yi Shi si"
+        },
+        {
+            "id": 99,
+            "input": "0",
+            "answer": ""
+        },
+        {
+            "id": 100,
+            "input": "-137732841",
+            "answer": "Fu yi Yi san Qian qi Bai qi Shi san Wan er Qian ba Bai si Shi yi"
+        },
+        {
+            "id": 101,
+            "input": "0",
+            "answer": ""
+        }
+    ]
+}
