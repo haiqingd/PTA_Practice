@@ -1,0 +1,13 @@
+{
+    "testcase": [
+        {
+            "id": 0,
+            "input": "3\nItai nyan~\nNinjin wa iyadanyan~\nuhhh nyan~",
+            "answer": "nyan~"
+        },{
+            "id": 1,
+            "input": "3\nItai!\nNinjinnwaiyada T_T\nT_T",
+            "answer": "nai"
+        }
+    ]
+}

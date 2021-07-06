@@ -12,7 +12,7 @@ public class Main {
         String line = in.readLine();
         while (!line.equals(" null")){
             sb.append(line);
-            line = " " + in.readLine();
+            line = "\n" + in.readLine();
         }
         System.out.println(submit(sb.toString()));
     }
